@@ -4,6 +4,14 @@ require_relative 'boot'
 
 require 'rails/all'
 
+# Rack 3 no longer defines Rack::File; provide a compatibility alias for gems expecting it.
+require 'rack'
+begin
+  require 'rack/files'
+rescue LoadError
+end
+Rack::File = Rack::Files if !defined?(Rack::File) && defined?(Rack::Files)
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)

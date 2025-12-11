@@ -44,6 +44,16 @@ if (isLibraryMode) {
 
 export default defineConfig({
   plugins: plugins,
+  server: {
+    allowedHosts: ['vite'],
+    watch: {
+      usePolling: true, // quan trọng trong container
+    },
+    fs: {
+      cachedChecks: false, // tắt cache để HMR nhận file mới
+    },
+  },
+
   build: {
     rollupOptions: {
       output: {

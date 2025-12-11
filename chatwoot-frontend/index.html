@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatwoot Dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"/>
+    <meta name="theme-color" content="#1f93ff">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <script>
+      // Mock configuration usually injected by Rails
+      window.chatwootConfig = {
+        hostURL: 'http://localhost:3000',
+        helpCenterURL: '',
+        fbAppId: '',
+        instagramAppId: '',
+        googleOAuthClientId: '',
+        googleOAuthCallbackUrl: '',
+        allowedLoginMethods: [],
+        fbApiVersion: 'v12.0',
+        whatsappAppId: '',
+        whatsappConfigurationId: '',
+        whatsappApiVersion: 'v12.0',
+        signupEnabled: 'true',
+        isEnterprise: 'false',
+        isMfaEnabled: 'false',
+        enabledLanguages: [
+          { name: 'English', iso_639_1_code: 'en' },
+          { name: 'Vietnamese', iso_639_1_code: 'vi' }
+        ],
+        helpUrls: {},
+        selectedLocale: 'en'
+      };
+      
+      window.globalConfig = {
+        INSTALLATION_NAME: 'Chatwoot Dev',
+        LOGO_THUMBNAIL: '/brand-logo.png',
+        WIDGET_BRAND_URL: 'https://www.chatwoot.com',
+        TERMS_URL: 'https://www.chatwoot.com/terms-of-service',
+        PRIVACY_URL: 'https://www.chatwoot.com/privacy-policy',
+        DISPLAY_MANIFEST: true,
+        CREATE_NEW_ACCOUNT_FROM_DASHBOARD: true,
+        CHATWOOT_INBOX_TOKEN: 'test-token',
+        API_CHANNEL_NAME: 'Chatwoot API',
+        API_CHANNEL_THUMBNAIL: '/brand-logo.png',
+        ANALYTICS_TOKEN: '',
+        ANALYTICS_BACKEND_TOKEN: '',
+        HTTP_PROXY: '',
+        ENABLE_ACCOUNT_SIGNUP: true,
+        FB_APP_ID: '',
+        INSTAGRAM_APP_ID: '',
+        FACEBOOK_API_VERSION: 'v12.0',
+        WHATSAPP_APP_ID: '',
+        WHATSAPP_CONFIGURATION_ID: '',
+        WHATSAPP_API_VERSION: 'v12.0',
+        IS_ENTERPRISE: false
+      };
+      
+      window.browserConfig = {
+        browser_name: 'chrome',
+      };
+      
+      window.errorLoggingConfig = '';
+    </script>
+    <script type="module" src="/src/entrypoints/dashboard.js"></script>
+  </head>
+  <body class="text-slate-600">
+    <div id="app"></div>
+    <noscript id="noscript">This app works best with JavaScript enabled.</noscript>
+  </body>
+</html>

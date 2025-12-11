@@ -120,6 +120,11 @@ const newReportRoutes = () => [
     to: accountScopedRoute('team_reports_index'),
     activeOn: ['team_reports_show'],
   },
+  {
+    name: 'Reports Label Channel',
+    label: t('SIDEBAR.REPORTS_LABEL_CHANNEL'),
+    to: accountScopedRoute('label_channel_reports'),
+  },
 ];
 
 const reportRoutes = computed(() => newReportRoutes());
@@ -373,7 +378,13 @@ const menuItems = computed(() => {
       label: t('SIDEBAR.REPORTS'),
       icon: 'i-lucide-chart-spline',
       children: [
-        {
+                {
+          name: 'Report Overview',
+          label: t('SIDEBAR.REPORTS_OVERVIEW'),
+          to: accountScopedRoute('account_overview_reports'),
+        },
+                  
+                {
           name: 'Report Overview',
           label: t('SIDEBAR.REPORTS_OVERVIEW'),
           to: accountScopedRoute('account_overview_reports'),
@@ -384,17 +395,18 @@ const menuItems = computed(() => {
           to: accountScopedRoute('conversation_reports'),
         },
         ...reportRoutes.value,
-        {
-          name: 'Reports CSAT',
-          label: t('SIDEBAR.CSAT'),
-          to: accountScopedRoute('csat_reports'),
-        },
+
         {
           name: 'Reports SLA',
           label: t('SIDEBAR.REPORTS_SLA'),
           to: accountScopedRoute('sla_reports'),
         },
         {
+          name: 'Reports Bot',
+          label: t('SIDEBAR.REPORTS_BOT'),
+          to: accountScopedRoute('bot_reports'),
+        },
+                {
           name: 'Reports Bot',
           label: t('SIDEBAR.REPORTS_BOT'),
           to: accountScopedRoute('bot_reports'),
